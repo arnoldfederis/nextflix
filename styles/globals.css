@@ -1,16 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600
+  }
+
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 transition-all lg:px-[60px] h-[68px]
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .header-link {
+    @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition duration-[.4s] hover:text-[#b3b3b3] select-none text-[13.5px]
+  }
 
-* {
-  box-sizing: border-box;
+  .header-left-container {
+    @apply flex items-center space-x-2 md:space-x-10
+  }
+
+  .header-right-container {
+    @apply flex items-center space-x-[20px] text-sm font-light
+  }
+
+  .search-input {
+    @apply pl-[35px] h-[35px] outline-0 bg-[#23201d] border-solid border-[1px] transition-all duration-500
+  }
+
+  .search-icon {
+    @apply h-6 w-6 absolute left-[7px] bottom-[5px] z-10
+  }
 }
