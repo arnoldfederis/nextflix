@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  images: {
+    domains: ['image.tmdb.org'],
+  },
+
   async redirects() {
     return [
       {
@@ -9,8 +13,8 @@ const nextConfig = {
         destination: '/browse',
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
